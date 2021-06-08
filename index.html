@@ -33,7 +33,7 @@
     <div id="app">
     {{ message }}
         <div class="cols" v-for="rows in rows">
-            <div class="cell" v-for="columns in columns" :class="{active: (active[0]==rows && active[1]==columns)}">
+            <div class="cell" v-for="columns in columns" :class="{active: (active[0]==rows && active[1]==columns)}" @click="active=[rows,columns]">
                 <p>{{ rows }},{{ columns }}</p>
             </div>
         </div>
