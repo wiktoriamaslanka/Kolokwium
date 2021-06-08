@@ -3,12 +3,26 @@
 <head>
     <title>Kolokwium</title>
     <script src="https://unpkg.com/vue"></script>
+    <style>
+        .cell {
+            height: 50px;
+            width: 50px;
+            background: orange;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
     {{ message }}
+        <div class="cell">
+            
+        </div>
     </div>
-
+    
     <script>
     var app = new Vue({
         el: '#app',
