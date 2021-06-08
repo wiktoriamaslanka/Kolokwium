@@ -22,6 +22,10 @@
             display: flex;
             flex-direction: row;
         }
+        .active {
+            background: red;
+            color: white;
+        }
 
     </style>
 </head>
@@ -29,7 +33,7 @@
     <div id="app">
     {{ message }}
         <div class="cols" v-for="rows in rows">
-            <div class="cell" v-for="columns in columns">
+            <div class="cell" v-for="columns in columns" :class="{active: (active[0]==rows && active[1]==columns)}">
                 <p>{{ rows }},{{ columns }}</p>
             </div>
         </div>
@@ -41,7 +45,8 @@
         data: {
             message: 'Powodzenia',
             rows: 10,
-            columns: 10
+            columns: 10,
+            active: [1,1]
         }
     })
     </script>
